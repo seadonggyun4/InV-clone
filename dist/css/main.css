@@ -493,23 +493,30 @@ button.btn span {
 }
 .loading {
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 100%;
-  min-height: 100vh;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
   background: #f4fcff;
+  z-index: 1000;
 }
 .loading .scan {
   position: relative;
   display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 .loading .scan .fingerprint {
   position: relative;
   width: 300px;
   height: 380px;
+  background: url(../static/images/fingerPrint_01.png);
   background-size: 300px;
   background-repeat: no-repeat;
 }
@@ -520,6 +527,7 @@ button.btn span {
   left: 0;
   width: 100%;
   height: 100%;
+  background: url(../static/images/fingerPrint_02.png);
   background-size: 300px;
   animation: scan 4s ease-in-out infinite;
 }
@@ -1160,7 +1168,7 @@ header .menu-m-btn img {
   height: 100%;
 }
 .pr-content h1 svg text {
-  font-size: 13.5vw;
+  font-size: 12vw;
   font-weight: 600;
   stroke-width: 0;
   stroke: #3e3e3e;
@@ -1551,7 +1559,7 @@ header .menu-m-btn img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  top: 45%;
+  top: 40%;
   font-weight: 600;
 }
 .content.swiper-content h1 svg {
@@ -1559,7 +1567,7 @@ header .menu-m-btn img {
   height: 100%;
 }
 .content.swiper-content h1 svg text {
-  font-size: 20vw;
+  font-size: 16vw;
   stroke-width: 0;
   stroke: #3e3e3e;
   fill: #3e3e3e;

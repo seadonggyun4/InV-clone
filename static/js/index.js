@@ -4,9 +4,15 @@ console.log('Home!! 😁')
 // [ =============================== fullpage js =============================== ]
 window.onload = () => {
   const loading = document.querySelector('.loading')
+  const main = document.querySelector('main')
+  const header = document.querySelector('header')
+  const aside = document.querySelector('aside')
 
   setTimeout(() => {
     loading.className += ' visually-hidden'
+    header.classList.remove('visually-hidden')
+    aside.classList.remove('visually-hidden')
+    main.classList.remove('visually-hidden')
 
     $(function(){
       $('#fullpage').fullpage({

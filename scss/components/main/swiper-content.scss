@@ -22,7 +22,7 @@
 
   h1{
     @include pos-center;
-    top: 45%;
+    top: 40%;
     // font-size: 9vw;
     font-weight: 600;   
 
@@ -31,7 +31,7 @@
             height: 100%;
 
             text{
-                font-size: 20vw;
+                font-size: 16vw;
                 stroke-width: 0;
                 stroke: #3e3e3e;
                 fill: #3e3e3e;
