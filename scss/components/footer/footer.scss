@@ -1,0 +1,79 @@
+.section.fp-auto-height{
+  .fp-tableCell{
+    background: #ECECEC;
+  }
+}
+
+
+.content.footer{
+  position: relative;
+  margin: 10vw 0;
+  background: #ECECEC;
+
+  .footer-list{
+    @include pos-center-y;
+    top: 40%;
+    left: 5%;
+
+    li{
+      margin-bottom: 2vw;
+      font-size: 2vw;
+      color: #777;
+
+      h1{
+        margin-bottom: 4vw;
+        font-size: 3.5vw;
+        font-weight: 500;
+        color: #333
+      }
+    }
+  }
+
+  span{
+    @include pos-center-y;
+    top: 90%;
+    left: 5%;
+    font-size: 2.5vw;
+    color: #777;
+  }
+}
+
+
+
+@include responsive(T){
+  .content.footer{
+    margin: 5vw 0;
+
+    .footer-list{
+      li{
+        margin-bottom: .5vw;
+        font-size: .8vw;
+
+        h1{
+          margin-bottom: 1vw;
+          font-size: 1.2vw;
+        }
+      }
+    }
+
+    span{
+      font-size: 1vw;
+    }
+
+    .logo{
+      @include pos-center-y;
+      @include flexbox;
+      top: 90%;
+      right: 5%;
+      width: 15vw;
+      height: 10vw;
+
+      img{
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+  }
+}
+

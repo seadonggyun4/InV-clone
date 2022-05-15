@@ -1,0 +1,27 @@
+#fp-nav{
+    opacity: 0;
+    ul{
+        li{
+            a{
+                span{
+                    height: 10px;
+                    width: 10px;
+                    background: #aaa;;
+                }
+
+                &.active{
+                    span{
+
+                        background: $primary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include responsive(T){
+    #fp-nav{
+        opacity: 1;
+    }
+}

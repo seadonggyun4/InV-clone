@@ -1,0 +1,30 @@
+button.btn{
+    @include flexbox(between, center);
+    font-size: 3.5vw;
+    width: 80%;
+    height: 50%;
+    // padding: 0.6em 0.6em 0.6em 0;
+    background: transparent;
+    border-bottom: 2px solid #e5e5e5;
+    transition: 0.3s;
+    cursor: pointer;
+
+    span{
+        @include flexbox;
+    }
+}
+
+@include responsive(T){
+    button.btn{
+        width: 55%;
+        height: 2vw;
+        font-size:1vw;
+
+        &:hover{
+            width: 65%;
+            padding-left: 10px;
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+        }
+    }
+}
+

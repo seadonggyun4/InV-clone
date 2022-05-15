@@ -1,0 +1,242 @@
+.section.active{
+    .pr-content{
+        opacity: 1;
+        transform: translateY(0);
+
+        h1{
+            svg{
+
+                text{
+                    animation: stroke2 5s;    
+                }
+            }
+        }
+    }
+}
+
+
+.pr-content{
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(50px);
+    
+    span{
+        display: block;
+        margin-bottom: 5%;
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: #111;
+    }
+
+    h1{
+        margin-bottom: 4%;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+
+        svg{
+            width: 100%;
+            height: 100%;
+
+            text{
+                font-size: 13.5vw;
+                font-weight: 600;
+                stroke-width: 0;
+                stroke: #3e3e3e;
+                fill: #3e3e3e;
+                
+            }
+
+            @keyframes stroke2 {
+                0%{
+                    fill: rgba(62,62,62,0);
+                    stroke: rgba(62,62,62,.2);
+                    stroke-dashoffset: 25%;
+                    stroke-dasharray: 0 50%;
+                    stroke-width: 1;
+                }
+                25%{
+                    fill: rgba(62,62,62,.05);
+                    stroke: rgba(62,62,62,.4);
+                }
+                40%{
+                    fill: rgba(62,62,62,.2);
+                    stroke: #3e3e3e;
+                    stroke-width: 1;
+                }
+                75%{
+                    fill: rgba(62,62,62,.75);
+                    stroke: rgba(62,62,62,.8);
+                }
+                100%{
+                    fill: #3e3e3e;
+                    stroke: rgba(62,62,62,0);
+                    stroke-dashoffset: -25%;
+                    stroke-dasharray: 50% 0;
+                    stroke-width: 0;
+                }
+            }
+        }
+
+        
+    }
+
+    h2{
+        margin-top: 10px;
+        margin-bottom: 8%;
+        font-size: .8rem;
+        font-weight: 300;
+        color: #777;
+    }
+
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+
+        li{
+            @include column-flexbox(center, end);
+            width: 50%;
+            margin-bottom: 3em;
+            
+            a{
+                cursor: pointer;
+                
+                .icon{
+                    width: 2.5em;
+                    height: 2.5em;
+                    overflow: hidden;
+                    margin-bottom: 0.5em;
+
+                    img{
+                        position: relative;
+                        height: 100%;
+                    }
+                }
+
+                h3{
+                    position: relative;
+                    font-size: 5vw;
+                    font-weight: 500;
+
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        top: -5px;
+                        left: 0;
+                        width: 30px;
+                        height: 3px;
+                        background: #c40958;
+                    }
+                }
+
+                .text{
+                    display: block;
+                    height: 6em;
+                    font-size: 1.3vw;
+                    color: #333;
+                    padding-right: 1em;
+                    margin-top: 1em;
+                }
+             
+            }
+        }
+    }
+
+    .bg-img{
+        position: absolute;
+        right: 0;
+        bottom: 7%;
+        width: 45%;
+        // max-width: 250px;
+
+        img{
+            width: 100%;
+        }
+    }
+}
+
+@include responsive(T){
+    .pr-content{
+        span{
+            font-size: 2rem;
+        }
+
+        h1{
+            font-size: 2rem;
+    
+
+            svg{
+                text{
+                    font-size: 2.5vw;
+                }
+            }
+            
+        }
+
+        h2{
+            font-size: .8rem;
+        }
+
+
+        .container{
+            li{
+                margin-right: 80px;
+                width: 25%;
+
+                a{
+                    .icon{
+                        width: 2.5vw;
+                        height: 2.5vw;
+                        margin-bottom: 3em;
+                    }
+
+                    h3{
+                        font-size: 1.3vw;
+
+                        &::after{
+                            top: -10px;
+                            width: 50px;
+                            height: 5px;
+                        }
+                    }
+
+                    .text{
+                        font-size: .8vw;
+                    }
+                }
+            }
+        }
+
+        .bg-img{
+            bottom: 35%;
+            right: 10%;
+            width: 25%;
+        }
+    }
+}
+
+@include responsive(D){
+    span{
+        font-size: 1.5vw;
+    }
+
+    .pr-content{
+        h1{
+            svg{
+                text{
+                    font-size: 1.8vw;
+                }
+            }
+        }
+
+        h2{
+            font-size: 1vw;
+        }
+    }
+}
+
+
