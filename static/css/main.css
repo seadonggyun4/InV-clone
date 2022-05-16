@@ -785,6 +785,7 @@ header .menu-m-btn img {
   position: relative;
   margin: 10vw 0;
   background: #ECECEC;
+  overflow: initial !important;
 }
 .content.footer .footer-list {
   position: absolute;
@@ -808,7 +809,7 @@ header .menu-m-btn img {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  top: 90%;
+  top: 98%;
   left: 5%;
   font-size: 2.5vw;
   color: #777;
@@ -820,14 +821,14 @@ header .menu-m-btn img {
   }
   .content.footer .footer-list li {
     margin-bottom: 0.5vw;
-    font-size: 0.8vw;
+    font-size: 0.6vw;
   }
   .content.footer .footer-list li h1 {
     margin-bottom: 1vw;
     font-size: 1.2vw;
   }
   .content.footer span {
-    font-size: 1vw;
+    font-size: 0.8vw;
   }
   .content.footer .logo {
     position: absolute;
@@ -1303,7 +1304,7 @@ header .menu-m-btn img {
   }
   .pr-content .bg-img {
     bottom: 35%;
-    right: 10%;
+    right: 5%;
     width: 25%;
   }
 }
